@@ -21,7 +21,6 @@ in stdenv.mkDerivation {
 
     # Ruby deps
     ruby
-    bundler
     bundix
 
     # Rails deps
