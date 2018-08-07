@@ -2,5 +2,6 @@
 
 nix-shell -p bundler --command "bundler lock"
 $(nix-build '<nixpkgs>' -A bundix)/bin/bundix
-nix-shell --command "rails new . --force --skip-bundle; bundler lock"
+nix-shell --command "rails new . --force --skip-bundle"
+nix-shell -p bundler --command "bundler lock"
 $(nix-build '<nixpkgs>' -A bundix)/bin/bundix
